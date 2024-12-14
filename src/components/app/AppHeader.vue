@@ -11,9 +11,7 @@
         to="/"
         class="app-title"
       >
-        <v-app-bar-title>
-          Application Bar
-        </v-app-bar-title>
+        <v-app-bar-title> Application Bar </v-app-bar-title>
       </NuxtLink>
       <template #append>
         <v-switch
@@ -45,8 +43,8 @@ const changeTheme = () => {
 </script>
 
 <style scoped>
-.app-title{
+.app-title {
   color: white;
-  text-decoration:none;
+  text-decoration: none;
 }
 </style>
