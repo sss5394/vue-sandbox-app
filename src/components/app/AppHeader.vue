@@ -25,7 +25,7 @@
         />
       </template>
     </v-app-bar>
-    <AppNavigation v-model="isOpen" />
+    <AppNavigation v-model:is-open="isOpen" />
   </div>
 </template>
 
