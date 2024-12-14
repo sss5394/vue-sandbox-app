@@ -1,3 +1,8 @@
 <template>
-  <v-footer border app>©mono</v-footer>
+  <v-footer
+    border
+    app
+  >
+    ©mono
+  </v-footer>
 </template>

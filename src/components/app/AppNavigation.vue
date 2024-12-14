@@ -1,5 +1,8 @@
 <template>
-  <v-navigation-drawer v-model="props.isOpen" permanent>
+  <v-navigation-drawer
+    v-model="isOpen"
+    permanent
+  >
     <v-list>
       <v-list-item
         v-for="(menu, i) in menus"
@@ -16,22 +19,35 @@
 
 <script setup lang="ts">
 /** props */
-interface Props {
-  isOpen: boolean;
-}
+const props = withDefaults(
+  defineProps<{
+    isOpen: boolean
+  }>(),
+  {
+    isOpen: false,
+  },
+)
 
-// デフォルトを定義
-const props = withDefaults(defineProps<Props>(), { isOpen: false });
+const emit = defineEmits<{
+  (e: 'update:isOpen', isOpen: boolean): void
+}>()
+
+const isOpen = computed({
+  get: () => props.isOpen,
+  set: (value) => {
+    emit('update:isOpen', value)
+  },
+})
 
 const menus = [
   {
     name: 'Top',
-    path: '/'
+    path: '/',
   },
   {
     name: 'About',
-    path: '/about'
-  }
+    path: '/about',
+  },
 ]
 </script>
 
