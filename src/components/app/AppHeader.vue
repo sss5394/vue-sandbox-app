@@ -1,27 +1,29 @@
 <template>
-  <v-app-bar 
-    color="primary" 
-    :elevation="2" 
-    elevate-on-scroll>
+  <div>
+    <v-app-bar 
+      color="primary" 
+      :elevation="2" 
+      elevate-on-scroll>
 
-    <v-app-bar-nav-icon @click="isOpen = !isOpen"/>
+      <v-app-bar-nav-icon @click="isOpen = !isOpen"/>
 
-    <NuxtLink to="/" class="app-title">
-      <v-app-bar-title>
-        Application Bar
-      </v-app-bar-title>
-    </NuxtLink>
-    <template v-slot:append>
-      <v-switch
-          v-model="darkTheme"
-          @update:model-value="changeTheme"
-          :prepend-icon="darkTheme ? 'mdi-weather-night' : 'mdi-weather-sunny'"
-          hide-details
-          inset
-          />
-    </template>
+      <NuxtLink to="/" class="app-title">
+        <v-app-bar-title>
+          Application Bar
+        </v-app-bar-title>
+      </NuxtLink>
+      <template v-slot:append>
+        <v-switch
+            v-model="darkTheme"
+            @update:model-value="changeTheme"
+            :prepend-icon="darkTheme ? 'mdi-weather-night' : 'mdi-weather-sunny'"
+            hide-details
+            inset
+            />
+      </template>
+    </v-app-bar>
     <AppNavigation :is-open="isOpen"/>
-  </v-app-bar>
+  </div>
 </template>
 
 <script setup lang="ts">
