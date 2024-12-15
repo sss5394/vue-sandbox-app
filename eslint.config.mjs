@@ -16,8 +16,8 @@ export default withNuxt(
       'vue/no-multiple-template-root': 'error',
       'vue/multi-word-component-names': 'off',
       'vue/require-v-for-key': 'error',
+      '@typescript-eslint/no-explicit-any': 'off',
       'vue/no-use-v-if-with-v-for': 'error',
-
       'import/order': [
         'error',
         {
