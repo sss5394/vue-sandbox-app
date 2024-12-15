@@ -11,7 +11,7 @@
         to="/"
         class="app-title"
       >
-        <v-app-bar-title> Application Bar </v-app-bar-title>
+        <v-app-bar-title> Vue Sandbox App </v-app-bar-title>
       </NuxtLink>
       <template #append>
         <v-switch
