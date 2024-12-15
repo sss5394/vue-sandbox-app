@@ -1,7 +1,6 @@
 <template>
   <div>
     <v-app-bar
-      color="primary"
       :elevation="2"
       elevate-on-scroll
     >
@@ -11,7 +10,7 @@
         to="/"
         class="app-title"
       >
-        <v-app-bar-title> Vue Sandbox App </v-app-bar-title>
+        <v-app-bar-title> Vue Sandbox Appp </v-app-bar-title>
       </NuxtLink>
       <template #append>
         <v-switch
@@ -28,7 +27,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
 import { useTheme } from 'vuetify'
 
 // ナビゲーションの表示・非表示を制御
@@ -36,15 +34,17 @@ const isOpen = useState('isOpen', () => false)
 
 const darkTheme = ref(false)
 const theme = useTheme()
+const titleCollor = ref('black')
 
 const changeTheme = () => {
   theme.global.name.value = darkTheme.value ? 'dark' : 'light'
+  titleCollor.value = darkTheme.value ? 'white' : 'black'
 }
 </script>
 
 <style scoped>
 .app-title {
-  color: white;
+  color:  v-bind(titleCollor);
   text-decoration: none;
 }
 </style>
