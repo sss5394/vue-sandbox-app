@@ -48,6 +48,10 @@ const menus = [
     name: 'About',
     path: '/about',
   },
+  {
+    name: 'LocalStorage',
+    path: '/localStorage',
+  },
 ]
 </script>
 

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>Welcome to the homepage</h1>
-    <AppAlert>
-      This is an auto-imported component
-    </AppAlert>
+    <AppPageTitle title="Top" />
+    <section>
+      <p>Welcome to the homepage.</p>
+    </section>
   </div>
 </template>
